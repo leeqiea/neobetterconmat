@@ -11,7 +11,7 @@
   "neobettercombat.configuration.longerAttack.tooltip": "近战攻击获得 +1 格的距离（纵深/触及距离）。默认禁用。",
 
   "neobettercombat.configuration.widerAttack": "更广的攻击范围",
-  "neobettercombat.configuration.widerAttack.tooltip": "近战攻击的范围更广（瞄准辅助），不改变攻击距离。",
+  "neobettercombat.configuration.widerAttack.tooltip": "近战攻击使用更宽的命中判定，不改变攻击距离。",
 
   "neobettercombat.configuration.widerAttackWidth": "攻击范围宽度",
   "neobettercombat.configuration.widerAttackWidth.tooltip": "攻击判定盒的宽度。",

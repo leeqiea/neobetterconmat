@@ -1,52 +1,24 @@
-# This is an example neoforge.mods.toml file. It contains the data relating to the loading mods.
-# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
-# The overall format is standard TOML format, v0.5.0.
-# Note that there are a couple of TOML lists in this file.
-# Find more information on toml format here:  https://github.com/toml-lang/toml
+modLoader="javafml"
+loaderVersion="[1,)"
 
-# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
-# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="${mod_license}"
+issueTrackerURL="https://github.com/leeqia/neobetterconmat/issues"
 
-# A URL to refer people to when problems occur with this mod
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
-
-# A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
-
-# The modid of the mod
 modId="${mod_id}" #mandatory
-
-# The version number of the mod
 version="${mod_version}" #mandatory
-
-# A display name for the mod
 displayName="${mod_name}" #mandatory
-
-# A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-
-# A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
-
-# A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
-
-# A text field displayed in the mod UI
-#credits="" #optional
-
-# The authors of the mod, displayed in the mod UI (optional)
-#authors=""
-
-# The authors of the mod, displayed in the mod UI (optional)
-authors="leeqia (port); SanAndreasP (original Better Combat Rebirth)"
-
-# The description text for the mod (multi line!) (#mandatory)
+displayURL="https://github.com/leeqia/neobetterconmat"
+authors="${mod_authors}"
+credits="Inspired by Better Combat Rebirth by SanAndreasP. Original project: https://github.com/SanAndreaP/BetterCombatRebirth"
 description='''
-A NeoForge port of Better Combat Rebirth. Adds dual-wielding off-hand attacks plus
-configurable melee tweaks: refund energy on miss, longer/wider reach, random crits,
-sweep for all items, hit/crit sounds, weaker off-hand, sprint attacks and an
-item whitelist/blacklist.
+Modern NeoForge melee combat with configurable main-hand and off-hand attacks.
+
+Features include optional wider melee hit detection, optional longer reach, random critical hits, off-hand weapon attacks, sprint-friendly attacking, sweep attack options, extra combat sounds, protected entity blacklist, and an in-game configuration screen.
+
+This project is inspired by Better Combat Rebirth, but it is an independent NeoForge implementation. It is not a fork, not an official update, and not affiliated with the original author.
+
+Install on both the client and the server for multiplayer.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

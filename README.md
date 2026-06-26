@@ -158,7 +158,7 @@ build/libs/
 
 Inspired by [Better Combat Rebirth](https://github.com/SanAndreaP/BetterCombatRebirth) by SanAndreasP.
 
-New Better Combat implementation by LeeQiea.
+New Better Combat implementation by leeqia.
 
 This project is unofficial and is not affiliated with or endorsed by SanAndreasP, Mojang, Microsoft, or NeoForge.
 

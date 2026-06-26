@@ -11,7 +11,7 @@
   "neobettercombat.configuration.longerAttack.tooltip": "Melee attacks gain +1 block of range (depth/reach). Disabled by default.",
 
   "neobettercombat.configuration.widerAttack": "Wider attack",
-  "neobettercombat.configuration.widerAttack.tooltip": "Melee attacks hit in a wider area (aim assist); does not change reach.",
+  "neobettercombat.configuration.widerAttack.tooltip": "Melee attacks use wider hit detection; does not change reach.",
 
   "neobettercombat.configuration.widerAttackWidth": "Wider attack width",
   "neobettercombat.configuration.widerAttackWidth.tooltip": "Width of the attack hitbox. ",
