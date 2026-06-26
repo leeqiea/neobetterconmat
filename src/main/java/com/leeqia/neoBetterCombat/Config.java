@@ -237,8 +237,8 @@ public final class Config {
 
         entityBlTags = new ArrayList<>();
         entityBlTypes = new ArrayList<>();
-        if (PROTECT_ARMOR_STANDS.get()) entityBlTypes.add(EntityType.ARMOR_STAND);
-        if (PROTECT_VILLAGERS.get()) entityBlTypes.add(EntityType.VILLAGER);
+        if (PROTECT_ARMOR_STANDS.get()) addEntityType(entityBlTypes, "armor_stand");
+        if (PROTECT_VILLAGERS.get()) addEntityType(entityBlTypes, "villager");
         for (String s : ENTITY_EXTRA.get()) {
             String t = s.trim();
             if (t.startsWith("#")) {
@@ -247,6 +247,10 @@ public final class Config {
                 BuiltInRegistries.ENTITY_TYPE.getOptional(Identifier.parse(t)).ifPresent(entityBlTypes::add);
             }
         }
+    }
+
+    private static void addEntityType(List<EntityType<?>> types, String id) {
+        BuiltInRegistries.ENTITY_TYPE.getOptional(Identifier.withDefaultNamespace(id)).ifPresent(types::add);
     }
 
     private static void parseItem(String s, List<TagKey<Item>> tags, List<Item> items) {

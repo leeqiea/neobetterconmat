@@ -1,5 +1,7 @@
 package com.leeqia.neoBetterCombat.client;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Optional;
 
 import com.leeqia.neoBetterCombat.Config;
@@ -44,6 +46,9 @@ public final class ClientCombat {
             Identifier.withDefaultNamespace("hud/crosshair_attack_indicator_background");
     private static final Identifier ATTACK_INDICATOR_PROGRESS =
             Identifier.withDefaultNamespace("hud/crosshair_attack_indicator_progress");
+    private static final Field OPTIONS_HIDE_GUI = findField(net.minecraft.client.Options.class, "hideGui");
+    private static final Field GUI_HUD = findField(net.minecraft.client.gui.Gui.class, "hud");
+    private static final Method HUD_IS_HIDDEN = findMethod("net.minecraft.client.gui.Hud", "isHidden");
 
     private static boolean offhandHandled;
 
@@ -67,7 +72,7 @@ public final class ClientCombat {
         }
         Minecraft mc = Minecraft.getInstance();
         LocalPlayer player = mc.player;
-        if (player == null || mc.options.hideGui || !mc.options.getCameraType().isFirstPerson()
+        if (player == null || isHudHidden(mc) || !mc.options.getCameraType().isFirstPerson()
                 || mc.options.attackIndicator().get() != AttackIndicatorStatus.CROSSHAIR) {
             return;
         }
@@ -91,6 +96,38 @@ public final class ClientCombat {
         if (p > 0) {
             g.blitSprite(RenderPipelines.CROSSHAIR, ATTACK_INDICATOR_PROGRESS, 16, 4, 0, 0, x, y, p, 4);
         }
+    }
+
+    private static Field findField(Class<?> owner, String name) {
+        try {
+            return owner.getField(name);
+        } catch (NoSuchFieldException ex) {
+            return null;
+        }
+    }
+
+    private static Method findMethod(String className, String name) {
+        try {
+            return Class.forName(className).getMethod(name);
+        } catch (ClassNotFoundException | NoSuchMethodException ex) {
+            return null;
+        }
+    }
+
+    private static boolean isHudHidden(Minecraft mc) {
+        try {
+            if (OPTIONS_HIDE_GUI != null) {
+                return OPTIONS_HIDE_GUI.getBoolean(mc.options);
+            }
+            if (GUI_HUD != null && HUD_IS_HIDDEN != null) {
+                Object hud = GUI_HUD.get(mc.gui);
+                Object hidden = HUD_IS_HIDDEN.invoke(hud);
+                return hidden instanceof Boolean value && value;
+            }
+        } catch (ReflectiveOperationException | RuntimeException ex) {
+            return false;
+        }
+        return false;
     }
 
     private static int offhandMaxCooldown(LocalPlayer player, ItemStack offhand) {

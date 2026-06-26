@@ -1,5 +1,7 @@
 package com.leeqia.neoBetterCombat;
 
+import java.lang.reflect.Method;
+
 import com.leeqia.neoBetterCombat.network.OffhandCooldownPayload;
 
 import net.minecraft.server.level.ServerLevel;
@@ -22,6 +24,11 @@ import net.neoforged.neoforge.network.PacketDistributor;
  * 因此目标被命中后的无敌时间不会在两隻手之间共享。
  */
 public final class OffhandCombat {
+    private static final Method KNOCKBACK_WITH_DAMAGE = findKnockback(
+            double.class, double.class, double.class, DamageSource.class, float.class);
+    private static final Method KNOCKBACK_SIMPLE = findKnockback(double.class, double.class, double.class);
+    private static boolean loggedKnockbackFailure;
+
     private OffhandCombat() {}
 
     /** 计算给定副手物品的副手攻击冷却时间（以刻为单位）。 */
@@ -165,7 +172,7 @@ public final class OffhandCombat {
                     && !(nearby instanceof net.minecraft.world.entity.decoration.ArmorStand stand && stand.isMarker())
                     && player.distanceToSqr(nearby) < reachSq) {
                 if (nearby.hurtServer(level, source, sweepDamage)) {
-                    nearby.knockback(0.4F,
+                    applySweepKnockback(nearby, source, sweepDamage,
                             net.minecraft.util.Mth.sin(player.getYRot() * (float) (Math.PI / 180.0)),
                             -net.minecraft.util.Mth.cos(player.getYRot() * (float) (Math.PI / 180.0)));
                     EnchantmentHelper.doPostAttackEffects(level, nearby, source);
@@ -176,6 +183,31 @@ public final class OffhandCombat {
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
                 net.minecraft.sounds.SoundEvents.PLAYER_ATTACK_SWEEP, player.getSoundSource(), 1.0F, 1.0F);
         spawnSweepParticle(level, player);
+    }
+
+    private static Method findKnockback(Class<?>... parameterTypes) {
+        try {
+            return LivingEntity.class.getMethod("knockback", parameterTypes);
+        } catch (NoSuchMethodException ex) {
+            return null;
+        }
+    }
+
+    private static void applySweepKnockback(LivingEntity target, DamageSource source, float damage, double x, double z) {
+        try {
+            if (KNOCKBACK_WITH_DAMAGE != null) {
+                KNOCKBACK_WITH_DAMAGE.invoke(target, 0.4D, x, z, source, damage);
+                return;
+            }
+            if (KNOCKBACK_SIMPLE != null) {
+                KNOCKBACK_SIMPLE.invoke(target, 0.4D, x, z);
+            }
+        } catch (ReflectiveOperationException | IllegalArgumentException ex) {
+            if (!loggedKnockbackFailure) {
+                loggedKnockbackFailure = true;
+                NeoBetterCombat.LOGGER.warn("Unable to apply sweep knockback; continuing without knockback", ex);
+            }
+        }
     }
 
     /** 在玩家前方发送原版横扫粒子。 */

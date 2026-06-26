@@ -1,7 +1,7 @@
 New Better Combat
 =================
 
-A NeoForge **26.1.2 / 26.2** compatible port (built against neo 26.1.2.76, Java 25) of
+A NeoForge **26.1.2 / 26.2** compatible port (dev runtime neo 26.2.0.7-beta, Java 25) of
 [Better Combat Rebirth](https://github.com/SanAndreaP/BetterCombatRebirth) by SanAndreasP
 (originally MC 1.12.2 / Forge). Mod id: `neobettercombat`.
 
