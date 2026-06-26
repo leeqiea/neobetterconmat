@@ -114,23 +114,6 @@ The in-game config screen provides live red/green validation for custom entries.
 
 ---
 
-## Implementation Notes
-
-New Better Combat is written for modern NeoForge APIs.
-
-Some notable implementation details:
-
-* Uses modern NeoForge data systems instead of legacy capability-style design.
-* Uses custom payload networking with `StreamCodec`.
-* Uses tag/id-based whitelist and blacklist checks.
-* Routes attack handling through server-side logic.
-* Layers crits, enchantments, sweep behavior, damage handling, and sounds through NeoForge events.
-* Uses vanilla sound events for additional hit and crit sounds.
-* Uses vanilla sweep particles for sweep attacks.
-* Supports both English and Simplified Chinese language files.
-* Provides an off-hand cooldown indicator near the vanilla crosshair attack indicator.
-
----
 
 ## Differences from Better Combat Rebirth
 
