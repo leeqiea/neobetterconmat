@@ -1,0 +1,87 @@
+{
+  "subtitles.neobettercombat.sword_slash": "Weapon slashes",
+  "subtitles.neobettercombat.critical_strike": "Critical strike",
+
+  "neobettercombat.configuration.title": "New Better Combat Config",
+
+  "neobettercombat.configuration.refundEnergyOnMiss": "Refund energy on miss",
+  "neobettercombat.configuration.refundEnergyOnMiss.tooltip": "Melee attacks that don't hit a target won't trigger the weapon cooldown.",
+
+  "neobettercombat.configuration.longerAttack": "Longer attack",
+  "neobettercombat.configuration.longerAttack.tooltip": "Melee attacks gain +1 block of range (depth/reach). Disabled by default.",
+
+  "neobettercombat.configuration.widerAttack": "Wider attack",
+  "neobettercombat.configuration.widerAttack.tooltip": "Melee attacks hit in a wider area (aim assist); does not change reach.",
+
+  "neobettercombat.configuration.widerAttackWidth": "Wider attack width",
+  "neobettercombat.configuration.widerAttackWidth.tooltip": "Width of the attack hitbox. ",
+
+  "neobettercombat.configuration.randomCrits": "Random crits",
+  "neobettercombat.configuration.randomCrits.tooltip": "Melee attacks have a 30% chance to critically strike; crits cannot be blocked.",
+
+  "neobettercombat.configuration.randomCritChance": "Random crit chance",
+  "neobettercombat.configuration.randomCritChance.tooltip": "Chance (0.0 - 1.0) for a random critical strike.",
+
+  "neobettercombat.configuration.requireFullEnergy": "Require full energy",
+  "neobettercombat.configuration.requireFullEnergy.tooltip": "You may only attack when the attack-strength bar is full. Disabled by default.",
+
+  "neobettercombat.configuration.weakerOffhand": "Weaker left arm",
+  "neobettercombat.configuration.weakerOffhand.tooltip": "Attacking an enemy with an off-hand weapon deals 50% less damage.",
+
+  "neobettercombat.configuration.offhandEfficiency": "Off-hand efficiency",
+  "neobettercombat.configuration.offhandEfficiency.tooltip": "Off-hand damage multiplier (attack damage x efficiency).",
+
+  "neobettercombat.configuration.attackAndSprint": "Attack and sprint",
+  "neobettercombat.configuration.attackAndSprint.tooltip": "Attacking while sprinting will no longer interrupt the sprint.",
+
+  "neobettercombat.configuration.moreSweep": "More sweep animation",
+  "neobettercombat.configuration.moreSweep.tooltip": "Every item can sweep (and deal sweep damage). When disabled (default), only sword-tagged weapons sweep.",
+
+  "neobettercombat.configuration.additionalHitSound": "Additional hit sound",
+  "neobettercombat.configuration.additionalHitSound.tooltip": "Play an additional sound when striking a target.",
+
+  "neobettercombat.configuration.additionalCritSound": "Additional crit sound",
+  "neobettercombat.configuration.additionalCritSound.tooltip": "Play an additional sound when a critical strike happens.",
+
+  "neobettercombat.configuration.enableOffhandAttack": "Enable off-hand attacks",
+  "neobettercombat.configuration.enableOffhandAttack.tooltip": "Right-click to attack with the off-hand weapon. Left + right click to slash with both hands.",
+
+  "neobettercombat.configuration.offhand": "Off-hand whitelist",
+  "neobettercombat.configuration.offhand.tooltip": "Which items may be used for off-hand attacks.",
+  "neobettercombat.configuration.allowSwords": "Allow swords",
+  "neobettercombat.configuration.allowSwords.tooltip": "Allow weapons tagged #minecraft:swords in the off-hand.",
+  "neobettercombat.configuration.allowAxes": "Allow axes",
+  "neobettercombat.configuration.allowAxes.tooltip": "Allow weapons tagged #minecraft:axes in the off-hand.",
+  "neobettercombat.configuration.allowPickaxes": "Allow pickaxes",
+  "neobettercombat.configuration.allowPickaxes.tooltip": "Allow items tagged #minecraft:pickaxes in the off-hand.",
+  "neobettercombat.configuration.allowShovels": "Allow shovels",
+  "neobettercombat.configuration.allowShovels.tooltip": "Allow items tagged #minecraft:shovels in the off-hand.",
+  "neobettercombat.configuration.allowHoes": "Allow hoes",
+  "neobettercombat.configuration.allowHoes.tooltip": "Allow items tagged #minecraft:hoes in the off-hand.",
+  "neobettercombat.configuration.offhandExtra": "Extra whitelist",
+  "neobettercombat.configuration.offhandExtra.tooltip": "Extra off-hand items. Use '#namespace:tag' or 'namespace:item'.",
+
+  "neobettercombat.configuration.mainhandBlacklist": "Main-hand blacklist",
+  "neobettercombat.configuration.mainhandBlacklist.tooltip": "If the main hand is doing one of these, off-hand attacking is disabled.",
+  "neobettercombat.configuration.blockWhileBow": "Disable while drawing bow/crossbow",
+  "neobettercombat.configuration.blockWhileBow.tooltip": "Disable off-hand attacks while the main hand is drawing a bow or crossbow.",
+  "neobettercombat.configuration.blockWhileConsuming": "Disable while eating/drinking",
+  "neobettercombat.configuration.blockWhileConsuming.tooltip": "Disable off-hand attacks while the main hand is eating or drinking.",
+  "neobettercombat.configuration.blockWhileBlocking": "Disable while blocking",
+  "neobettercombat.configuration.blockWhileBlocking.tooltip": "Disable off-hand attacks while the main hand is blocking (shield).",
+  "neobettercombat.configuration.blockWhileTrident": "Disable while using trident",
+  "neobettercombat.configuration.blockWhileTrident.tooltip": "Disable off-hand attacks while the main hand is using a trident/spear.",
+  "neobettercombat.configuration.mainhandExtra": "Extra blacklist",
+  "neobettercombat.configuration.mainhandExtra.tooltip": "Extra main-hand entries. Use '#tag', 'namespace:item', or 'anim:<use_animation>'.",
+
+  "neobettercombat.configuration.entityBlacklist": "Entity blacklist",
+  "neobettercombat.configuration.entityBlacklist.tooltip": "Entities that cannot be hit by an off-hand attack.",
+  "neobettercombat.configuration.protectArmorStands": "Protect armor stands",
+  "neobettercombat.configuration.protectArmorStands.tooltip": "Armor stands cannot be hit by off-hand attacks.",
+  "neobettercombat.configuration.protectVillagers": "Protect villagers",
+  "neobettercombat.configuration.protectVillagers.tooltip": "Villagers cannot be hit by off-hand attacks.",
+  "neobettercombat.configuration.protectOwnedPets": "Protect owned pets",
+  "neobettercombat.configuration.protectOwnedPets.tooltip": "Your own tamed pets cannot be hit by off-hand attacks.",
+  "neobettercombat.configuration.entityExtra": "Extra blacklist",
+  "neobettercombat.configuration.entityExtra.tooltip": "Extra protected entities. Use '#namespace:tag' or 'namespace:entity'."
+}

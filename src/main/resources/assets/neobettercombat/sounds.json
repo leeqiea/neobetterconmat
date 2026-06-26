@@ -1,0 +1,14 @@
+{
+  "player.swordslash": {
+    "subtitle": "subtitles.neobettercombat.sword_slash",
+    "sounds": [
+      { "name": "minecraft:entity.player.attack.sweep", "type": "event" }
+    ]
+  },
+  "player.criticalstrike": {
+    "subtitle": "subtitles.neobettercombat.critical_strike",
+    "sounds": [
+      { "name": "minecraft:entity.player.attack.crit", "type": "event" }
+    ]
+  }
+}

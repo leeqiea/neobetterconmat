@@ -1,0 +1,87 @@
+{
+  "subtitles.neobettercombat.sword_slash": "武器挥砍",
+  "subtitles.neobettercombat.critical_strike": "暴击",
+
+  "neobettercombat.configuration.title": "New Better Combat 配置",
+
+  "neobettercombat.configuration.refundEnergyOnMiss": "未命中不触发冷却",
+  "neobettercombat.configuration.refundEnergyOnMiss.tooltip": "没有击中目标的近战攻击不会触发武器冷却时间。",
+
+  "neobettercombat.configuration.longerAttack": "更远的攻击距离",
+  "neobettercombat.configuration.longerAttack.tooltip": "近战攻击获得 +1 格的距离（纵深/触及距离）。默认禁用。",
+
+  "neobettercombat.configuration.widerAttack": "更广的攻击范围",
+  "neobettercombat.configuration.widerAttack.tooltip": "近战攻击的范围更广（瞄准辅助），不改变攻击距离。",
+
+  "neobettercombat.configuration.widerAttackWidth": "攻击范围宽度",
+  "neobettercombat.configuration.widerAttackWidth.tooltip": "攻击判定盒的宽度。",
+
+  "neobettercombat.configuration.randomCrits": "随机暴击",
+  "neobettercombat.configuration.randomCrits.tooltip": "近战攻击有 30％ 的几率暴击，暴击无法格挡。",
+
+  "neobettercombat.configuration.randomCritChance": "随机暴击几率",
+  "neobettercombat.configuration.randomCritChance.tooltip": "随机暴击的几率（0.0 - 1.0）。",
+
+  "neobettercombat.configuration.requireFullEnergy": "能量满才能攻击",
+  "neobettercombat.configuration.requireFullEnergy.tooltip": "能量条满了才能进行攻击。默认禁用。",
+
+  "neobettercombat.configuration.weakerOffhand": "虚弱的左臂",
+  "neobettercombat.configuration.weakerOffhand.tooltip": "副手持武器攻击敌人会减少 50％ 的伤害。",
+
+  "neobettercombat.configuration.offhandEfficiency": "副手伤害系数",
+  "neobettercombat.configuration.offhandEfficiency.tooltip": "副手攻击的伤害系数（攻击伤害 × 系数）。",
+
+  "neobettercombat.configuration.attackAndSprint": "疾跑攻击",
+  "neobettercombat.configuration.attackAndSprint.tooltip": "疾跑时攻击不会打断冲刺状态。",
+
+  "neobettercombat.configuration.moreSweep": "更多横扫动画",
+  "neobettercombat.configuration.moreSweep.tooltip": "所有物品均可触发横扫动画（并附带横扫伤害）。默认仅 tag 为剑的武器可以触发横扫。",
+
+  "neobettercombat.configuration.additionalHitSound": "命中声音",
+  "neobettercombat.configuration.additionalHitSound.tooltip": "击中目标后有额外的声音。",
+
+  "neobettercombat.configuration.additionalCritSound": "暴击声音",
+  "neobettercombat.configuration.additionalCritSound.tooltip": "暴击时有额外的声音。",
+
+  "neobettercombat.configuration.enableOffhandAttack": "启用副手攻击",
+  "neobettercombat.configuration.enableOffhandAttack.tooltip": "右键单击使用副手武器攻击；通过鼠标左右键可以双手砍击敌人。",
+
+  "neobettercombat.configuration.offhand": "副手物品白名单",
+  "neobettercombat.configuration.offhand.tooltip": "哪些物品可以用于副手攻击。",
+  "neobettercombat.configuration.allowSwords": "允许剑",
+  "neobettercombat.configuration.allowSwords.tooltip": "允许 #minecraft:swords 标签的武器用于副手。",
+  "neobettercombat.configuration.allowAxes": "允许斧",
+  "neobettercombat.configuration.allowAxes.tooltip": "允许 #minecraft:axes 标签的武器用于副手。",
+  "neobettercombat.configuration.allowPickaxes": "允许镐",
+  "neobettercombat.configuration.allowPickaxes.tooltip": "允许 #minecraft:pickaxes 标签的物品用于副手。",
+  "neobettercombat.configuration.allowShovels": "允许锹",
+  "neobettercombat.configuration.allowShovels.tooltip": "允许 #minecraft:shovels 标签的物品用于副手。",
+  "neobettercombat.configuration.allowHoes": "允许锄",
+  "neobettercombat.configuration.allowHoes.tooltip": "允许 #minecraft:hoes 标签的物品用于副手。",
+  "neobettercombat.configuration.offhandExtra": "额外白名单",
+  "neobettercombat.configuration.offhandExtra.tooltip": "额外的副手物品。使用 '#命名空间:标签' 或 '命名空间:物品'。",
+
+  "neobettercombat.configuration.mainhandBlacklist": "主手黑名单",
+  "neobettercombat.configuration.mainhandBlacklist.tooltip": "主手正在进行这些操作时，禁用副手攻击。",
+  "neobettercombat.configuration.blockWhileBow": "拉弓/弩时禁用",
+  "neobettercombat.configuration.blockWhileBow.tooltip": "主手拉弓或上弩时禁用副手攻击。",
+  "neobettercombat.configuration.blockWhileConsuming": "进食/饮用时禁用",
+  "neobettercombat.configuration.blockWhileConsuming.tooltip": "主手进食或饮用时禁用副手攻击。",
+  "neobettercombat.configuration.blockWhileBlocking": "格挡时禁用",
+  "neobettercombat.configuration.blockWhileBlocking.tooltip": "主手举盾格挡时禁用副手攻击。",
+  "neobettercombat.configuration.blockWhileTrident": "使用三叉戟时禁用",
+  "neobettercombat.configuration.blockWhileTrident.tooltip": "主手使用三叉戟/长矛时禁用副手攻击。",
+  "neobettercombat.configuration.mainhandExtra": "额外黑名单",
+  "neobettercombat.configuration.mainhandExtra.tooltip": "额外的主手条目。使用 '#标签'、'命名空间:物品' 或 'anim:使用动作'。",
+
+  "neobettercombat.configuration.entityBlacklist": "实体黑名单",
+  "neobettercombat.configuration.entityBlacklist.tooltip": "不能被副手攻击命中的实体。",
+  "neobettercombat.configuration.protectArmorStands": "保护盔甲架",
+  "neobettercombat.configuration.protectArmorStands.tooltip": "盔甲架不会被副手攻击命中。",
+  "neobettercombat.configuration.protectVillagers": "保护村民",
+  "neobettercombat.configuration.protectVillagers.tooltip": "村民不会被副手攻击命中。",
+  "neobettercombat.configuration.protectOwnedPets": "保护已驯服宠物",
+  "neobettercombat.configuration.protectOwnedPets.tooltip": "你自己驯服的宠物不会被副手攻击命中。",
+  "neobettercombat.configuration.entityExtra": "额外黑名单",
+  "neobettercombat.configuration.entityExtra.tooltip": "额外的受保护实体。使用 '#命名空间:标签' 或 '命名空间:实体'。"
+}
